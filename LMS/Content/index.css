@@ -1,0 +1,19 @@
+﻿* { margin:0;padding:0;}
+
+.content{
+    width:1024px;
+    height:800px;
+}
+.left {
+    width:20%;
+    height:400px;
+    float:left;
+
+}
+.right{
+
+    float:left;
+}
+.foot{
+    clear:both;
+}
