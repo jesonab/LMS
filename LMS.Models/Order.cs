@@ -11,22 +11,16 @@ namespace LMS.Model
         { }
         #region Model
         private int _orderid;
-        private int _carid;
-        private int _classid;
         private DateTime _ordertime;
         private string _address;
         private int _ordernum;
         private decimal _ordermoney;
-        private int _s_custono;
         private string _s_custoname;
-        private int _f_custono;
         private string _f_custoname;
         private string _goodsname;
         private string _start;
         private string _end;
         private string _path;
-        private int _adminno;
-        private int _lineid;
         /// <summary>
         /// 
         /// </summary>
@@ -38,19 +32,13 @@ namespace LMS.Model
         /// <summary>
         /// 
         /// </summary>
-        public int CarID
-        {
-            set { _carid = value; }
-            get { return _carid; }
-        }
+        public Car CarID
+        {  set ;  get ;  }
         /// <summary>
         /// 
         /// </summary>
-        public int ClassID
-        {
-            set { _classid = value; }
-            get { return _classid; }
-        }
+        public Class ClassID
+        { set ; get; }
         /// <summary>
         /// 
         /// </summary>
@@ -86,11 +74,8 @@ namespace LMS.Model
         /// <summary>
         /// 
         /// </summary>
-        public int S_CustoNo
-        {
-            set { _s_custono = value; }
-            get { return _s_custono; }
-        }
+        public S_Customer S_CustoNo
+        { set ; get ;  }
         /// <summary>
         /// 
         /// </summary>
@@ -102,11 +87,8 @@ namespace LMS.Model
         /// <summary>
         /// 
         /// </summary>
-        public int F_CustoNo
-        {
-            set { _f_custono = value; }
-            get { return _f_custono; }
-        }
+        public F_Customer F_CustoNo
+        { set; get; }
         /// <summary>
         /// 
         /// </summary>
@@ -150,19 +132,13 @@ namespace LMS.Model
         /// <summary>
         /// 
         /// </summary>
-        public int AdminNo
-        {
-            set { _adminno = value; }
-            get { return _adminno; }
-        }
+        public Admin AdminNo
+        {set ; get ; }
         /// <summary>
         /// 
         /// </summary>
-        public int LineID
-        {
-            set { _lineid = value; }
-            get { return _lineid; }
-        }
+        public line LineID
+        { set; get; }
         #endregion Model
 
     }

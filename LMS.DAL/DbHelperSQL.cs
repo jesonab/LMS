@@ -1,27 +1,25 @@
 ﻿using System;
+
 using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
+using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.Common;
+using System.Collections.Generic;
 
 namespace LMS.DAL
 {
-    class DbHelperSQL
+    /// <summary>
+    /// 数据访问抽象基础类
+    /// Copyright (C) Maticsoft 
+    /// </summary>
+    public abstract class DbHelperSQL
     {
-        /*
-         c#添加了Configuration;后，竟然找不到 ConfigurationManager 这个类，后来才发现：虽然引用了using System.Configuration;这个包，但是还是不行的。
-        后来终于找到一个解决方法，就是在解决方案资源管理器里找到类文件选择“引用”，然后右击选择“添加引用”，并且从
- .net 中找到System.Configuration把它加上去就OK啦
-         */
         //数据库连接字符串(web.config来配置)，多数据库可使用DbHelperSQLP来实现.
         public static string connectionString = ConfigurationManager.ConnectionStrings["sqlservercon"].ConnectionString;
         public DbHelperSQL()
         {
-
         }
 
 

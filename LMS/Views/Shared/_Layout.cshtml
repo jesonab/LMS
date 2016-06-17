@@ -12,52 +12,47 @@
     <link href="~/Content/index.css" rel="stylesheet" />
     <script src="~/scripts/jquery-1.10.2.js"></script>
     <script src="~/scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/scripts/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="~/scripts/fullcalendar.css" />
+    <link rel="stylesheet" href="~/scripts/matrix-style.css" />
+    <link rel="stylesheet" href="~/scripts/matrix-media.css" />
+    <link href="~/scripts//font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/scripts/jquery.gritter.css" />
+    <link href='~/scripts/a.css' rel='stylesheet' type='text/css'>
     @RenderSection("HeaderSection", false)
 </head>
 <body>
-    <div class="">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/Account/index">首页 <span class="sr-only">(current)</span></a></li>
-
-                        <li><a href="#">车辆管理</a></li>
-                        <li><a href="#">班次管理</a></li>
-                        <li><a href="#">订单管理</a></li>
-                        <li><a href="#">交接单管理</a></li>
-                        <li><a href="#">线路管理</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <li><a href="/Account/login">登录</a></li>
-                        <li><a href="/Account/add">注册</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <div>
-            <div class="left">
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="#">首页</a></li>
-                    <li class="list-group-item"><a href="#">车辆管理</a></li>
-                    <li class="list-group-item"><a href="#">班次管理</a></li>
-                    <li class="list-group-item"><a href="#">订单管理</a></li>
-                    <li class="list-group-item"><a href="#">交接单管理</a></li>
-                    <li class="list-group-item"><a href="#">线路管理</a></li>
+    <div id="header">
+        <h1><a href="dashboard.html">LMS</a></h1>
+    </div>
+    <!--close-Header-part-->
+    <!--top-Header-menu-->
+    <div id="user-nav" class="navbar navbar-inverse">
+        <ul class="nav">
+            <li class="dropdown" id="profile-messages">
+                <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-user"></i> 我的信息</a></li>
                 </ul>
-            </div>
-        </div>
+            <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+        </ul>
+    </div>
+    <!--close-top-Header-menu-->
+
+    <!--sidebar-menu-->
+    <div id="sidebar">
+        <a href="#" class="visible-phone"><i class="icon icon-home"></i> 订单管理</a>
+        <ul>
+            <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>首页</span></a> </li>
+            <li> <a href="#"> <span>订单管理</span></a> </li>
+            <li> <a href="#"> <span>线路详情</span></a> </li>
+            <li> <a href="#"> <span>车辆情况</span></a> </li>
+            <li> <a href="#"> <span>修改信息</span></a></li>
+            <li> <a href="#"> <span>退出</span></a></li>
+        </ul>
+    </div>
+    <!--sidebar-menu-->
+    <div>
         <div class="right">
             @RenderSection("contentBody")
         </div>

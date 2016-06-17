@@ -14,7 +14,6 @@ namespace LMS.Model
         private string _start;
         private string _end;
         private DateTime _classtime;
-        private int _carid;
         /// <summary>
         /// 
         /// </summary>
@@ -50,11 +49,8 @@ namespace LMS.Model
         /// <summary>
         /// 
         /// </summary>
-        public int CarID
-        {
-            set { _carid = value; }
-            get { return _carid; }
-        }
+        public Car CarID
+        {  set ; get ;  }
         #endregion Model
 
     }
