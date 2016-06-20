@@ -8,12 +8,11 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using LMS.Models;
+using LMS.Model;
 using LMS.BLL;
 
 namespace LMS.Controllers
 {
-    [Authorize]
     public class AccountController : Controller
     {
         LMS.BLL.AdminBLL bll = new LMS.BLL.AdminBLL();
