@@ -9,7 +9,7 @@ namespace LMS.Models
         [Display(Name = "电子邮件")]
         public string Email { get; set; }
     }
-
+    
     public class ExternalLoginListViewModel
     {
         public string ReturnUrl { get; set; }

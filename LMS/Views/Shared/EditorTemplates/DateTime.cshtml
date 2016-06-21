@@ -1,0 +1,3 @@
+﻿@model System.DateTime?
+<script src="~/My97DatePicker/WdatePicker.js"></script>
+@Html.TextBoxFor(m => m, "{0:yyyy - mm - dd }", new { @class = "Date", onclick = "DatePicker" });
